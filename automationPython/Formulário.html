@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <style>
+body
+{
+    background-image: url(background.jpeg);
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área disponível */
+    background-position: center; /* Centraliza a imagem na tela */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo seja repetida */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+    form {
+        width: 30%;
+      background-color: #3b3534bd;
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid black; /* Adiciona uma borda preta de 2px */
+      
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      background-color: #3b3534bd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #45a049;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+      
+    }
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+
+    }
+    th {
+background-color: #3b3534bd;    }
+#menu {
+    position: fixed;
+    right: -8.5em;
+    top: 50%;
+    width: 8em;
+    background-color: #3b3534e0; 
+    color: white;
+    margin: -3em 0 0 0;
+    padding: 0.5em 0.5em 0.5em 2.5em;
+    border-radius: 10%;
+    transition: 0.5s; 
+    
+  }
+
+
+  #menu:hover { right: 0;
+transition: 0.5s;
+
+}
+
+
+  #menu a {
+    position: relative;
+    left: 0;
+    color: azure;
+    font-size: 110%;
+    text-decoration: none;
+    text-shadow: 0 0 10px #0b35f3, 0 0 20px #0b35f3, 0 0 30px #0b35f3;
+    color: white;
+    
+  }
+
+
+
+
+  #menu:hover a:focus {
+    left: 0;
+    background: none;
+  }
+
+  #menu {
+    margin: 0;
+    transform: translate(0, -50%);
+  }
+
+  #menu { margin: -3em 0 0 0 }
+@supports (transform: translate(0, -50%)) {
+  #menu {
+    margin-top: 0;
+    transform: translate(0, -50%);
+  }
+}
+  </style>
+</head>
+<body>
+  <ul id=menu>
+    
+    <li><a href="https://github.com/Arthur-byte-code/" target="_blank"><h1>GitHub</h1></a>
+
+    </ul>
+  <form id="productForm" action="#" method="post">
+    <label for="codigo_produto">Código do Produto:</label>
+    <input type="text" id="codigo_produto" name="codigo_produto">
+
+    <label for="marca_produto">Marca do Produto:</label>
+    <input type="text" id="marca_produto" name="marca_produto">
+
+    <label for="tipo_produto">Tipo do Produto:</label>
+    <input type="text" id="tipo_produto" name="tipo_produto">
+
+    <label for="categoria_produto">Categoria do Produto:</label>
+    <input type="text" id="categoria_produto" name="categoria_produto">
+
+    <label for="preco_unitario">Preço Unitário do Produto:</label>
+    <input type="text" id="preco_unitario" name="preco_unitario">
+
+    <label for="custo_produto">Custo do Produto:</label>
+    <input type="text" id="custo_produto" name="custo_produto">
+
+    <label for="observacoes">Observações:</label>
+    <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+  </form>
+
+  <table id="productTable">
+    <thead>
+        <tr>
+            <th>Código do Produto</th>
+            <th>Marca do Produto</th>
+            <th>Tipo do Produto</th>
+            <th>Categoria do Produto</th>
+            <th>Preço Unitário do Produto</th>
+            <th>Custo do Produto</th>
+            <th>Observações</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    document.getElementById("productForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      var formData = new FormData(this);
+      var tableRef = document.getElementById("productTable").getElementsByTagName('tbody')[0];
+      var newRow = tableRef.insertRow();
+
+      for (var pair of formData.entries()) {
+        var newCell = newRow.insertCell();
+        var newText = document.createTextNode(pair[1]);
+        newCell.appendChild(newText);
+      }
+    });
+  </script>
+
+</body>
+</html>
