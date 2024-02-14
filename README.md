@@ -17,3 +17,61 @@ This Python script utilizes the `pyautogui` library for automating interactions 
     - Scrolls down the page.
 13. The script finishes its execution.
 
+
+
+---
+
+## Automating Web Form Filling with PyAutoGUI
+
+This is a Python code example that utilizes the PyAutoGUI library to automate the filling of a web form using the Microsoft Edge browser. The goal is to fill form fields with data stored in a CSV file.
+
+### Features:
+
+- Opens the Microsoft Edge browser.
+- Loads a specific web page.
+- Reads data from a CSV file.
+- Fills form fields with data from the CSV file.
+- Submits the form automatically.
+
+### How to Use:
+
+1. Install the necessary libraries:
+
+    - Install Python 3.x: [Download Python](https://www.python.org/downloads/)
+    
+    - Install the PyAutoGUI and pandas libraries via pip:
+
+    ```bash
+    pip install pyautogui pandas
+    ```
+
+2. Run the Python script.
+
+3. Make sure to adjust the file paths as needed:
+
+    - Update the HTML file path in the `link` variable.
+    - Ensure that the CSV file with the data is correctly specified.
+
+### Step-by-Step Algorithm:
+
+1. Opens the Microsoft Edge browser.
+2. Loads a specific web page.
+3. Reads data from a CSV file.
+4. Fills form fields with data from the CSV file.
+5. Submits the form automatically.
+
+### Requirements:
+
+- Python 3.x
+- Installed Microsoft Edge browser
+- Access to the PyAutoGUI and pandas modules
+
+### Notes:
+
+- This script has been tested in a Windows environment.
+- Adjustments may be necessary depending on the specific dimensions and layout of the web form.
+- It's important to understand the risks of automation and ensure that the usage is ethical and legal.
+
+---
+
+
