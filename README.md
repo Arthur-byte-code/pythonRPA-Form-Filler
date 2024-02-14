@@ -63,7 +63,7 @@ This is a Python code example that utilizes the PyAutoGUI library to automate th
 ### Requirements:
 
 - Python 3.x
-- Installed Microsoft Edge browser
+- Installed Microsoft Edge browser (it can be any browser, since you replace with its name in the script)
 - Access to the PyAutoGUI and pandas modules
 
 ### Notes:
