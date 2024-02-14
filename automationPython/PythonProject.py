@@ -5,7 +5,7 @@ pyautogui.press("win")
 pyautogui.write("microsoft edge")
 pyautogui.press("enter")
 time.sleep(5)
-link = "file:///C:/Users/PutYourPcNameHere/Desktop/automationPython/Formul%C3%A1rio.html"
+link = "file:///C:/Users/PutYourPcNameHere/Desktop/automationPython/Formul%C3%A1rio.html"# put the correct html path here
 pyautogui.write(link)
 time.sleep(8)
 pyautogui.press("enter")
