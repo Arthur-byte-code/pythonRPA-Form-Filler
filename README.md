@@ -5,7 +5,7 @@ This Python script utilizes the `pyautogui` library for automating interactions 
 3. Presses the Windows key to open the Start menu.
 4. Types "microsoft edge" into the search bar and presses Enter to open Microsoft Edge.
 5. Waits for 5 seconds to ensure the browser has opened.
-6. Defines a variable `link` containing a file path to a local HTML file.
+6. Defines a variable `link` containing a file path to a local HTML file.(its necessary to be your own file path)
 7. Enters the link into the browser's address bar and presses Enter.
 8. Waits for 8 seconds for the page to load.
 9. Imports the `pandas` library for reading CSV files.
